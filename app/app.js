@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = [
         'ironman.jpg', 'terminator.jpg', 'tanos.jpg',
-        'avangers.jpg', 'guardians.jpg', 'cap.jpg'
+        'avangers.jpg', 'guardians.jpg', 'cap.jpg',
+        'bad_tanos.jpg', 'avengers-era-de-ultron.jpg',
+        'avengers-endgame-batalla-final.jpg', 'marvel-studios-logo.jpg',
+        'avengers-endgame.jpg', 'marvel-studios-logo.jpg',
+        'nebula-del-espacio.jpg', 'tierra-y-luna-a-la-luz-del-sol.jpg',
+        'pelicula-guardianes-de-la-galaxia.jpg', 'tierra.jpg', 'espacio-estrellas-universo-nebulosa.jpg' 
         // Add more card filenames here
     ];
 
