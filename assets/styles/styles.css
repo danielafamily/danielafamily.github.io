@@ -1,27 +1,29 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #FFE4C4; /* Light Bisque background to give a warm, welcoming vibe */
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #FFE4C4;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto; /* Ensure scrolling is available */
 }
 
 .game-container {
     text-align: center;
     padding: 20px;
-    background-color: #F8C471; /* Warm orange background to represent Mexican sun and festivities */
+    background-color: #F8C471;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for a 3D effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 40px 0;
 }
 
 h1 {
-    color: #E74C3C; /* Vibrant red for the title, reminiscent of Mexican banners and flags */
+    color: #E74C3C;
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: 'Fredoka One', cursive; /* A more playful, bold font */
+    font-family: 'Fredoka One', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -30,68 +32,62 @@ h1 {
 }
 
 #current-card {
-    width: 320px;
-    height: 420px;
-    border: 5px solid #2ECC71; /* Bright green border to represent the green in the Mexican flag */
+    width: 300px;
+    height: 400px;
+    border: 5px solid #2ECC71;
     border-radius: 10px;
-    background-color: #FFFFFF; /* White background inside card border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#draw-card {
+#draw-card, #reset-game {
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #F39C12; /* Bright orange button for high visibility and festive feel */
+    background-color: #F39C12;
     color: #FFF;
     border: none;
     border-radius: 10px;
+    margin-top: 15px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for a 3D effect */
-}
-
-#draw-card:hover {
-    background-color: #D35400; /* Darker orange on hover to indicate interaction */
-}
-
-#drawn-cards {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#drawn-cards img {
-    width: 100px;
-    height: 130px;
-    margin: 8px;
-    border: 3px solid #E74C3C; /* Red borders to tie in with the title */
-    border-radius: 5px;
-    background-color: #FDFEFE; /* Slight off-white background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
-
-#drawn-cards img:hover {
-    transform: scale(1.1); /* Slight zoom on hover to make interaction more dynamic */
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #reset-game {
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #E74C3C; /* Bright red button to distinguish from the draw button */
-    color: #FFF;
-    border: none;
-    border-radius: 10px;
-    margin-top: 15px; /* Space between buttons */
-    margin-left: 10px; /* Space between the draw and reset buttons */
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for a 3D effect */
+    background-color: #E74C3C;
+    margin-left: 10px;
 }
 
-#reset-game:hover {
-    background-color: #C0392B; /* Darker red on hover to indicate interaction */
+#draw-card:hover, #reset-game:hover {
+    background-color: #D35400;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #E74C3C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-container img:hover {
+    transform: perspective(1000px) rotateY(15deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.grid-container img:active {
+    transform: perspective(1000px) rotateY(-15deg) rotateX(-5deg) scale(0.95);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }

@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'avengers-endgame-batalla-final.jpg', 'marvel-studios-logo.jpg',
         'avengers-endgame.jpg', 'marvel-studios-logo.jpg',
         'nebula-del-espacio.jpg', 'tierra-y-luna-a-la-luz-del-sol.jpg',
-        'pelicula-guardianes-de-la-galaxia.jpg', 'espacio-estrellas-universo-nebulosa.jpg' 
-        // Add more card filenames here
+        'pelicula-guardianes-de-la-galaxia.jpg', 'espacio-estrellas-universo-nebulosa.jpg'
+        // Add more card filenames here if needed
     ];
 
     let originalDeck = [...cards]; // Copy of the original deck to reset later
@@ -32,11 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCardImg.src = `assets/images/${drawnCard}`;
         currentCardImg.alt = drawnCard;
 
-        // Add the card to the drawn cards container
-        const imgElement = document.createElement('img');
-        imgElement.src = `assets/images/${drawnCard}`;
-        imgElement.alt = drawnCard;
-        drawnCardsContainer.appendChild(imgElement);
+        // Update the drawn cards grid
+        updateDrawnCardsGrid();
     });
 
     resetGameBtn.addEventListener('click', () => {
@@ -50,10 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
         currentCardImg.alt = '';
 
         // Clear the drawn cards display
-        while (drawnCardsContainer.firstChild) {
-            drawnCardsContainer.removeChild(drawnCardsContainer.firstChild);
-        }
+        updateDrawnCardsGrid();
 
         alert('El cartón será reiniciado!!!');
     });
+
+    function updateDrawnCardsGrid() {
+        // Clear the grid container
+        drawnCardsContainer.innerHTML = '';
+
+        // Add the drawn cards to the grid
+        drawnCards.forEach(card => {
+            const imgElement = document.createElement('img');
+            imgElement.src = `assets/images/${card}`;
+            imgElement.alt = card;
+            drawnCardsContainer.appendChild(imgElement);
+        });
+    }
 });
