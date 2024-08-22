@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     drawCardBtn.addEventListener('click', () => {
         if (cards.length === 0) {
-            alert('All cards have been drawn!');
+            alert('El Cartón está lleno!!!');
             return;
         }
 
@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             drawnCardsContainer.removeChild(drawnCardsContainer.firstChild);
         }
 
-        alert('El cartón será reiniciado!');
+        alert('El cartón será reiniciado!!!');
     });
 });
