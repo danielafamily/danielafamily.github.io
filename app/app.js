@@ -1,13 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = [
-        'ironman.jpg', 'terminator.jpg', 'tanos.jpg',
-        'avangers.jpg', 'guardians.jpg', 'cap.jpg',
-        'bad_tanos.jpg', 'avengers-era-de-ultron.jpg',
-        'avengers-endgame-batalla-final.jpg', 'marvel-studios-logo.jpg',
-        'avengers-endgame.jpg', 'marvel-studios-logo.jpg',
-        'nebula-del-espacio.jpg', 'tierra-y-luna-a-la-luz-del-sol.jpg',
-        'pelicula-guardianes-de-la-galaxia.jpg', 'espacio-estrellas-universo-nebulosa.jpg'
-        // Add more card filenames here if needed
+        '01_avangers.jpg', 
+        '02_avengers-endgame-batalla-final.jpg', 
+        '03_avengers-endgame.jpg', 
+        '04_avengers-era-de-ultron.jpg', 
+        '05_bad_tanos.jpg', 
+        '06_cap.jpg', 
+        '07_espacio-estrellas-universo-nebulosa.jpg', 
+        '08_guardians.jpg', 
+        '09_ironman.jpg', 
+        '10_marvel-studios-logo.jpg', 
+        '11_nebula-del-espacio.jpg', 
+        '12_ninos-en-el-espacio.jpg', 
+        '13_pelicula-guardianes-de-la-galaxia.jpg', 
+        '14_tanos.jpg', 
+        '15_terminator.jpg', 
+        '16_tierra-y-luna-a-la-luz-del-sol.jpg'
     ];
 
     let originalDeck = [...cards]; // Copy of the original deck to reset later
