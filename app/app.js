@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = [
-        'ironman.jpg', 'terminator.jpg', 'tanos.jpg'
+        'ironman.jpg', 'terminator.jpg', 'tanos.jpg',
+        'avangers.jpg', 'guardians.jpg', 'cap.jpg'
         // Add more card filenames here
     ];
 
