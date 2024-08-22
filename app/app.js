@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'avengers-endgame-batalla-final.jpg', 'marvel-studios-logo.jpg',
         'avengers-endgame.jpg', 'marvel-studios-logo.jpg',
         'nebula-del-espacio.jpg', 'tierra-y-luna-a-la-luz-del-sol.jpg',
-        'pelicula-guardianes-de-la-galaxia.jpg', 'tierra.jpg', 'espacio-estrellas-universo-nebulosa.jpg' 
+        'pelicula-guardianes-de-la-galaxia.jpg', 'espacio-estrellas-universo-nebulosa.jpg' 
         // Add more card filenames here
     ];
 
