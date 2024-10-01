@@ -5,22 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const COLUMNS = 4; // Number of columns in the grid
 
     let cards = [ // Change from const to let
-        '01_avangers.jpg', 
-        '02_avengers-endgame-batalla-final.jpg', 
-        '03_avengers-endgame.jpg', 
-        '04_avengers-era-de-ultron.jpg', 
-        '05_bad_tanos.jpg', 
-        '06_cap.jpg', 
-        '07_espacio-estrellas-universo-nebulosa.jpg', 
-        '08_guardians.jpg', 
-        '09_ironman.jpg', 
-        '10_marvel-studios-logo.jpg', 
-        '11_nebula-del-espacio.jpg', 
-        '12_ninos-en-el-espacio.jpg', 
-        '13_pelicula-guardianes-de-la-galaxia.jpg', 
-        '14_tanos.jpg', 
-        '15_terminator.jpg', 
-        '16_tierra-y-luna-a-la-luz-del-sol.jpg'
+        '01.jpg', 
+        '02.jpg', 
+        '03.jpg', 
+        '04.jpg', 
+        '05.jpg', 
+        '06.jpg', 
+        '07.jpg', 
+        '08.jpg', 
+        '09.jpg', 
+        '10.jpg', 
+        '11.jpg', 
+        '12.jpg', 
+        '13.jpg', 
+        '14.jpg', 
+        '15.jpg', 
+        '16.jpg',
+        '17.jpg',
+        '18.jpg'
     ];
 
     let originalDeck = [...cards]; // Copy of the original deck to reset later
